@@ -1,0 +1,90 @@
+/* styles.css */
+
+/* 1️⃣  Importar la tipografía Open Sans de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* 2️⃣  Fuente base */
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* 3️⃣  Paleta de colores personalizada (tonos azul/verde/gris) */
+:root {
+    --bs-primary: #0062cc;               /* Azul profesional */
+    --bs-primary-rgb: 0, 98, 204;
+    --bs-success: #28a745;               /* Verde para acciones exitosas */
+    --bs-success-rgb: 40, 167, 69;
+}
+
+/* 4️⃣  Navbar y branding */
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* 5️⃣  Efecto hover en tarjetas (cards) */
+.card {
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* 6️⃣  Animación fade‑in para nuevos contactos */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* 7️⃣  Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+footer a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+/* 8️⃣  Cabecera del modal (color principal) */
+.modal-header {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* 9️⃣  Ajustes responsivos */
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* 🔟  Enfoque en campos del formulario */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 .2rem rgba(var(--bs-primary-rgb), .25);
+}
+
+/* 11️⃣  Botones personalizados */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #004a99;
+    border-color: #004a99;
+}
+.btn-success {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}

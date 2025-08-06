@@ -1,0 +1,102 @@
+/*
+ * Archivo: styles.css
+ * Descripción: Estilos personalizados para el Gestor de Contactos.
+ */
+
+/* --- Configuración General y Tema --- */
+:root {
+    --primary-color: #0d6efd; /* Azul primario de Bootstrap */
+    --secondary-color: #6c757d; /* Gris secundario */
+    --background-color: #f8f9fa; /* Fondo gris claro */
+    --card-bg-color: #ffffff;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+/* --- Sección del Formulario --- */
+#form-section {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    margin-bottom: 3rem;
+}
+
+/* --- Estilo de las Tarjetas de Contacto --- */
+.contact-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Para que el borde de color se vea bien */
+    border-left: 5px solid var(--primary-color);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card .card-body {
+    padding: 1.5rem;
+}
+
+.contact-card .card-title {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.contact-card .card-text i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* --- Botones --- */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* --- Pie de página --- */
+.footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 2rem 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+.footer p {
+    margin: 0;
+}

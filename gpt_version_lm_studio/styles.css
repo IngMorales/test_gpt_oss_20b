@@ -1,0 +1,50 @@
+/* --------------------------------------------------------------
+ * Archivo: styles.css
+ * Descripción: Estilos personalizados para el proyecto.
+ * -------------------------------------------------------------- */
+
+/* Tipografía base */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.nav-link:hover, .nav-link.active {
+    color: #ffdd57 !important;
+}
+
+/* Botones */
+.btn-success, .btn-primary {
+    transition: background-color .3s ease, transform .2s ease;
+}
+.btn-success:hover, .btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Tarjetas de contacto */
+.card {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+}
+
+/* Animación de aparición */
+.fade-in {
+    animation: fadeInUp 0.5s forwards;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+}
